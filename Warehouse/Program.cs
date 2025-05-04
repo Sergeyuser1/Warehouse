@@ -9,9 +9,10 @@
 
             using (ApplicationContext db = new ApplicationContext())
             {
-              
                 
-               db.Products.AddRange(truck.Products[0]);
+
+
+              db.Products.AddRange(truck.Products[0]);
                 db.SaveChanges();
 
                
