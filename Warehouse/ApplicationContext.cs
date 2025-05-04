@@ -19,8 +19,10 @@ namespace Warehouse
         {
             optionsBuilder.UseNpgsql("Host=localhost;Port=21715;Database=Warehouse;Username=postgres;Password=Postgres");
         }
+         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<Product>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -31,6 +33,7 @@ namespace Warehouse
                 entity.Property(e => e.SizeProduct);
 
             });
+
         }
     }
 
